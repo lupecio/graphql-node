@@ -49,6 +49,7 @@ export const postResolvers = {
                 })
                 .then((post: PostInstance) => {
                     throwError(!post, `Post with id ${id} not found!`);
+                    return post;
                 }).catch(handleError);
         }
     },
